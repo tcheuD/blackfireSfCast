@@ -1,0 +1,19 @@
+name "Various scenarios for the site"
+
+# override with --endpoint option
+endpoint "https://localhost:8000"
+
+scenario
+    name "Basic Visit"
+
+    visit url("/")
+        name "Homepage"
+        expect status_code() == 200
+        expect css("tbody.js-sightings-list tr").count() > 10
+        # won't work until we're using Blackfire environment
+        assert metrics.sql.queries.count < 30
+
+    click link("Log In")
+        name "Login page"
+        expect status_code() == 200
+
