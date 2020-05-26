@@ -55,8 +55,8 @@ class MainController extends AbstractController
     public function gitHubOrganizationInfo(GitHubApiHelper $apiHelper)
     {
         $organizationName = 'SymfonyCasts';
-        $repositories = $apiHelper->getOrganizationRepositories($organizationName);
         $organization = $apiHelper->getOrganizationInfo($organizationName);
+        $repositories = $apiHelper->getOrganizationRepositories($organizationName);
 
         return $this->json([
             'organization' => $organization,
