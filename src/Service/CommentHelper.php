@@ -17,6 +17,6 @@ class CommentHelper
     public function countRecentCommentsForUser(User $user): int
     {
         return $this->commentRepository
-            ->countForUser($user, (new \DateTimeImmutable('-3 months'));
+            ->countForUser($user, (new \DateTimeImmutable('-3 months')));
     }
 }
