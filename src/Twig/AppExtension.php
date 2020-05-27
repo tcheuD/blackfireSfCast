@@ -11,6 +11,7 @@ use Twig\TwigFunction;
 class AppExtension extends AbstractExtension
 {
     private $commentHelper;
+    private $userStatuses = [];
 
     public function __construct(CommentHelper $commentHelper)
     {
@@ -25,6 +26,15 @@ class AppExtension extends AbstractExtension
     }
 
     public function getUserActivityText(User $user): string
+    {
+        if (!isset($this->userStatuses[$user->getId()])) {
+            $this->userStatuses[$user->getId()] = $this->calculateUserActivityText($user);
+        }
+
+        return $this->userStatuses[$user->getId()];
+    }
+
+    private function calculateUserActivityText(User $user): string
     {
         $commentCount = $this->commentHelper->countRecentCommentsForUser($user);
 
