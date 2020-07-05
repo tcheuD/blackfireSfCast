@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b7d154946dd95e4c58bac38ab3b4104",
+    "content-hash": "13740ff586d16ef7bd8a7421da5e13fd",
     "packages": [
         {
             "name": "blackfire/php-sdk",
-            "version": "v1.22.0",
+            "version": "v1.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/blackfireio/php-sdk.git",
-                "reference": "4188f61bad20b45b19b61c3b6225f9aec2c8c8e4"
+                "reference": "c11e9546182fcd8c2f3b1d5a4b867da062264355"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/blackfireio/php-sdk/zipball/4188f61bad20b45b19b61c3b6225f9aec2c8c8e4",
-                "reference": "4188f61bad20b45b19b61c3b6225f9aec2c8c8e4",
+                "url": "https://api.github.com/repos/blackfireio/php-sdk/zipball/c11e9546182fcd8c2f3b1d5a4b867da062264355",
+                "reference": "c11e9546182fcd8c2f3b1d5a4b867da062264355",
                 "shasum": ""
             },
             "require": {
@@ -25,6 +25,8 @@
                 "php": ">=5.2.0"
             },
             "require-dev": {
+                "guzzlehttp/psr7": "^1.6",
+                "psr/http-message": "^1.0",
                 "symfony/http-client": "^4.3"
             },
             "suggest": {
@@ -68,7 +70,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2020-03-13T12:50:29+00:00"
+            "time": "2020-05-29T11:19:11+00:00"
         },
         {
             "name": "composer/ca-bundle",
